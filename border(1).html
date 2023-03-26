@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('img/Border\(1\).png');
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__border_question_two">
+            <div class="wrapper__border_question_text_two">
+                <span class="wrapper__border_question_one_two">Какое электронное оборудование везёте?</span>
+            </div>
+            <div class="wrapper__border_question_answer">
+                <input type="text" placeholder="Ваш ответ..." id="text">
+                <div class="btn"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            let link = document.querySelector('.btn');
+            setInterval(() => {
+                let text = document.querySelector('#text').value;
+                if (text == 'ноутбук' || text == 'Ноутбук' || text == 'НОУТБУК') {
+                    link.innerHTML = '<a href="border(2).html">Дальше</a>';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
